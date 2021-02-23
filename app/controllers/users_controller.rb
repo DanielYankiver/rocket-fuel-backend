@@ -14,9 +14,14 @@ class UsersController < ApplicationController
         render json: @user 
     end
 
+    def destroy
+        @user = User.find(params[:id]).destroy 
+        render json: {}
+    end
+
     def logout
         @current_user = nil
         render json: {}
     end
-    
+
 end
