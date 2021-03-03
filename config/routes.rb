@@ -5,10 +5,11 @@ Rails.application.routes.draw do
 
   post '/login', to: 'users#login'
 
-  get '/me', to: 'users#show'
+  get '/profile', to: 'users#show'
   post '/users', to: 'users#create'
   patch 'users/:id', to: 'users#update'
   delete '/users/:id', to: 'users#destroy'
 
+  # get for all of the link pages 
 
 end
